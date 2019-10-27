@@ -94,7 +94,7 @@ export default {
       });
     },
     onGitClick() {
-      window.open("https://github.com/lorgan3/coscale-vr", "_blank");
+      window.open("https://github.com/lorgan3/newrelic-vr", "_blank");
     },
     onGitHover() {
       this.labelInfo({ text: "Visit GitHub", target: this.$refs.git.object3D });
