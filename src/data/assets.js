@@ -4,10 +4,10 @@ import tux from "../assets/tux.png";
 import octocat from "../assets/octocat.png";
 
 export const ASSETS = {
-  boat: "/models/boat.gltf",
-  container: "/models/container.gltf",
-  pod: "/models/pod.gltf",
-  rowboat: "/models/rowboat.gltf",
+  boat: "./models/boat.gltf",
+  container: "./models/container.gltf",
+  pod: "./models/pod.gltf",
+  rowboat: "./models/rowboat.gltf",
 
   tux,
   smoke,
