@@ -122,3 +122,9 @@ export default {
   store
 };
 </script>
+
+<style>
+.a-enter-vr {
+  display: none;
+}
+</style>
