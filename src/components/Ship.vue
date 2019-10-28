@@ -54,7 +54,7 @@ export default {
       model: asset("boat")
     };
   },
-  computed: mapState(["cameraTarget"]),
+  computed: mapState(["cameraTarget", "cameraTargetType"]),
   methods: {
     ...mapActions(["moveCamera", "labelCluster"]),
     getPosition(i) {
@@ -69,13 +69,15 @@ export default {
       const y = Math.random() * 8 - 4;
       return `${0} ${y} ${0}`;
     },
-    onClick() {
-      this.moveCamera({
-        target: this.$el.object3D,
-        distance: 15,
-        height: 6,
-        type: "ship"
-      });
+    onClick(e) {
+      // Do not move when clicking a container on the ship that was already selected.
+      if (this.cameraTarget !== this.$el.object3D || e.path[1] !== this.$el)
+        this.moveCamera({
+          target: this.$el.object3D,
+          distance: 15,
+          height: 6,
+          type: "ship"
+        });
     },
     onHover() {
       if (this.cameraTarget !== this.$el.object3D) {
