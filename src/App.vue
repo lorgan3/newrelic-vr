@@ -124,7 +124,7 @@ export default {
 </script>
 
 <style>
-.a-enter-vr {
+/* .a-enter-vr {
   display: none;
-}
+} */
 </style>
